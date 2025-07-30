@@ -501,4 +501,3 @@ ostream& ReMapData::printAsTable( ostream& aOut ) const {
 ostream& operator<<( ostream& aOut, const ReMapData& aData ) {
     return aData.printAsTable( aOut );
 }
-
