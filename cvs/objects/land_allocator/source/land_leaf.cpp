@@ -150,7 +150,7 @@ void LandLeaf::completeInit( const string& aRegionName,
     mCarbonContentCalc->completeInit( privateDiscountRateLand );
 
     // Ensure that a carbon cycle object has been setup.
-    assert( mCarbonContentCalc.get() );
+    assert( mCarbonContentCalc );
 
     // Ensure that any land allocation read in was positive
     // Note: zero land allocation is allowed

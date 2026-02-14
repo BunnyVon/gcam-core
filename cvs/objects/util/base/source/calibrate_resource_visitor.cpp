@@ -230,7 +230,7 @@ void CalibrateResourceVisitor::startVisitSubRenewableResource( const SubRenewabl
         /*!
          * \warning This routine will fail when using a gdp supply elasticity.
          */
-        assert( aSubResource->gdpSupplyElasticity == 0 );
+        assert( aSubResource->mGdpSupplyElasticity == 0 );
 
         // Next, determine which grade of resource is produced to get to the
         // annual production needed.

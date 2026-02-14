@@ -296,7 +296,7 @@ const vector<double> Sector::calcSubsectorShares( const GDP* aGDP, const int aPe
         
         // All shares are zero likely due to underflow.  Give 100% share to the
         // minimum cost subsector.
-        assert( subsec.size() > 0 );
+        assert( mSubsectors.size() > 0 );
         int minPriceIndex = 0;
         double minPrice = mSubsectors[ minPriceIndex ]->getPrice( aGDP, aPeriod );
         subsecShares[ 0 ] = 0.0;
@@ -311,7 +311,7 @@ const vector<double> Sector::calcSubsectorShares( const GDP* aGDP, const int aPe
         subsecShares[ minPriceIndex ] = 1.0;        // ... except the lowest price
     }
     /*! \post There is one share per subsector. */
-    assert( subsecShares.size() == subsec.size() );
+    assert( subsecShares.size() == mSubsectors.size() );
     return subsecShares;
 }
 

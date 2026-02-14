@@ -157,7 +157,7 @@ bool Scenario::XMLParse(rapidxml::xml_node<char>* & aNode) {
             /*!
              * \pre Modeltime has already been created.
              */
-            assert( modeltime.get() );
+            assert( mModeltime );
             
             // this must be done here rather than relying on XMLHelper since we require a factory
             // to create our object
